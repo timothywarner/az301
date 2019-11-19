@@ -1,4 +1,4 @@
-# AZ-301 Session 2 Labs
+# AZ-301 Session 2 Labs 
 
 ## Module 4: Design a Business Continuity Strategy
 

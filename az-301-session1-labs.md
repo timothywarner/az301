@@ -1,4 +1,4 @@
-# AZ-301 Session 1 Labs
+# AZ-301 Session 1 Labs 
 
 ## Module 1: Determine Workload Requirements
 
