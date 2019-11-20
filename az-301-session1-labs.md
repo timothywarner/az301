@@ -16,6 +16,7 @@
 * Authorization
   * RBAC
   * App registrations/managed IDs
+  * AZURE AD CONNECT!
   * Keys
   * AD PIM
 
