@@ -1,34 +1,38 @@
-# AZ-301 Session 1 Labs 
+# AZ-301 Session 1 Labs
 
-## Module 1: Determine Workload Requirements
+## Consumption, Auditing, Monitoring Design
 
-* optimize resource consumption
-  * Tags
-  * Policy
-  * Auditing (Activity log)
-  * Monitoring
-    * Mgmt Solutions (* Analytics bundles)
+* Cost management/ tags
+* Metrics
+* Alerts
+* Event routing (Logic app)
 
-## Module 2: Design for Identity and Security
+## Identity Design
 
 * Authentication
-  * SSO
-  * Hybrid cloud
-  * MFA
+    * SSO
+    * MFA
+    * IDP
 * Authorization
   * RBAC
-  * Policy
+  * App registrations/managed IDs
+  * Keys
+  * AD PIM
 
-## Module 3: Design a Data Platform Solution
+## Data Platform Solution Design
 
 * Data management
   * Relational and non-relational databases
+    * Azure SQl options
+    * Cosmos DB
   * DTU sizing
   * Alerting based on query requests
+  *
 * Data protection
   * Azure Disk Encryption
   * Managed Storage Accounts / SSE
   * Azure SQL Always Encrypted/TDE
+    * Storage account backup / soft delete
 
 ## Exam Prep Guidance
 
