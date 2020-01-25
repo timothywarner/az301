@@ -5,7 +5,8 @@
 * Cost management/ tags
 * Metrics
 * Alerts
-* Event routing (Logic app)
+* KQL / alerts
+* Logic App / Event Grid
 
 ## Identity Design
 
@@ -17,7 +18,6 @@
   * RBAC
   * App registrations/managed IDs
   * AZURE AD CONNECT!
-  * Keys
   * AD PIM
 
 ## Data Platform Solution Design
