@@ -19,12 +19,20 @@
   * ARM template design
 * Virtual machines
   * Networking
+  * Reserved instances
 * Platform apps
   * Web apps
   * Function apps (pricing plans, triggers)
 * Design migrations
   * Data import options
   * Database migration
+
+* Event Grid
+* - Subscription w/ storage account queue
+
+* Azure CDN
+  * - app services
+  * - storage account
 
 ## Exam Prep Guidance
 
