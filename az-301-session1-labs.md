@@ -17,7 +17,7 @@
 * Authorization
   * RBAC
   * App registrations/managed IDs
-  * AZURE AD CONNECT!
+  * AZURE AD CONNECT! / Connect Health / idfix
   * AD PIM
 
 ## Data Platform Solution Design
@@ -27,13 +27,14 @@
     * Azure SQl options
     * Cosmos DB
   * DTU sizing
+  * * Geo redundant DB backups
   * Alerting based on query requests
   *
 * Data protection
   * Azure Disk Encryption
   * Managed Storage Accounts / SSE
   * Azure SQL Always Encrypted/TDE
-    * Storage account backup / soft delete
+    * Storage account backup / soft delete / tierings
 
 ## Exam Prep Guidance
 

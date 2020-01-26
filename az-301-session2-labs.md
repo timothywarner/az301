@@ -2,6 +2,7 @@
 
 * API Management
     * look for speaker ID 16
+    * Policies to protect APIs (rate limiting)
 
 ## Business Continuity / High Availabilty Strategy Design
 
@@ -25,14 +26,15 @@
   * Function apps (pricing plans, triggers)
 * Design migrations
   * Data import options
-  * Database migration
-
+  * Database migration / stretch db
 * Event Grid
 * - Subscription w/ storage account queue
 
 * Azure CDN
   * - app services
   * - storage account
+
+App Service hybrid connection manager
 
 ## Exam Prep Guidance
 
