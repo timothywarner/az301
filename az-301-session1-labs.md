@@ -5,7 +5,7 @@
 * Cost management/ tags
 * Metrics
 * Alerts
-* KQL / alerts
+* KQL / alerts / ITSM connector
 * Logic App / Event Grid
 
 ## Identity Design

@@ -21,6 +21,7 @@
 * Virtual machines
   * Networking
   * Reserved instances
+  * dedicated host
 * Platform apps
   * Web apps
   * Function apps (pricing plans, triggers)
@@ -35,6 +36,8 @@
   * - storage account
 
 App Service hybrid connection manager
+
+Azure Batch
 
 ## Exam Prep Guidance
 
