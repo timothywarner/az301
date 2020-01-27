@@ -29,7 +29,9 @@
 ## Data Platform Solution Design
 
 * Data management
-  * Relational and non-relational databases
+* Storage account
+  * Data Lake
+* Relational and non-relational databases
     * Azure SQL DB product family
       * DTU vs vCore
       * Always Encrypted
