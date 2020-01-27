@@ -39,7 +39,9 @@
   * Alerting based on query requests
 
 * Data protection
-  * Azure Disk Encryption
+  * VMs
+    * Azure Disk Encryption
+    * Availability zone/Availability set
   * Key Vault
   * Storage accounts
     * SSE
