@@ -7,7 +7,7 @@
 (Get-AzResource -ResourceId /subscriptions/<subscription-id>/resourceGroups/oreilly/providers/Microsoft.Storage/storageAccounts/<storage-name>).Tags
 
 # See existing tags for a named resource
-(Get-AzResource -ResourceName 'oreilly-keyvault1' -ResourceGroupName 'oreilly').Tags
+(Get-AzResource -ResourceName 'TimKV' -ResourceGroupName 'oreilly').Tags
 
 # Get resource groups that have a specific tag
 (Get-AzResourceGroup -Tag @{ Dept = "Finance" }).ResourceGroupName

@@ -2,39 +2,50 @@
 
 ## Consumption, Auditing, Monitoring Design
 
+* Reservations
+* Spot instances
 * Cost management/ tags
 * Metrics
 * Alerts
 * KQL / alerts / ITSM connector
-* Logic App / Event Grid
+* Event Grid integration
+  * Storage queue
 
 ## Identity Design
 
 * Authentication
-    * SSO
+    * SSO w/ Azure AD Connect
+      * idFix
+      * AD Connect Health
     * MFA
-    * IDP
+      * Conditional Access
+      * Azure AD IdP
 * Authorization
   * RBAC
-  * App registrations/managed IDs
-  * AZURE AD CONNECT! / Connect Health / idfix
-  * AD PIM
+    * Custom roles
+  * App registrations/managed identity
+  * Azure AD Privileged Identity Management
 
 ## Data Platform Solution Design
 
 * Data management
   * Relational and non-relational databases
-    * Azure SQl options
+    * Azure SQL DB product family
+      * DTU vs vCore
+      * Always Encrypted
+      * TDE
     * Cosmos DB
-  * DTU sizing
-  * * Geo redundant DB backups
+  * Geo redundant DB backups
   * Alerting based on query requests
-  *
+
 * Data protection
   * Azure Disk Encryption
-  * Managed Storage Accounts / SSE
-  * Azure SQL Always Encrypted/TDE
-    * Storage account backup / soft delete / tierings
+  * Key Vault
+  * Storage accounts
+    * SSE
+    * Snapshot
+    * Data tiering
+    * Soft delete
 
 ## Exam Prep Guidance
 

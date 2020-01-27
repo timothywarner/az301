@@ -1,40 +1,65 @@
-# Managed Storage Account
-# Reference: https://docs.microsoft.com/en-us/azure/key-vault/key-vault-overview-storage-keys-powershell
+# Reference: https://raw.githubusercontent.com/ned1313/Configuring-and-Managing-Microsoft-Azure-Key-Vault/master/m2/M2_Exercises.ps1
 
-# Authorize Key Vault to access to your storage account
+#Prefix for resources
+$prefix = "oreilly"
 
-# Create a storage account
-New-AzStorageAccount -ResourceGroupName 'oreilly' `
-    -Name 'oreillystg7837' `
-    -Location 'eastus2' `
-    -SkuName Standard_LRS `
-    -Kind StorageV2
+#Basic variables
+$location = "eastus2"
+$id = Get-Random -Minimum 1000 -Maximum 9999
 
-# TODO: Update with the resource group where your storage account resides, your storage account name, the name of your active storage account key, and your Key Vault instance name
-$resourceGroupName = "oreilly"
-$storageAccountName = "oreillystg7837"
-$storageAccountKey = ""
-$keyVaultName = "oreilly-keyvault"
-$keyVaultSpAppId = "cfa8b339-82a2-471a-a3c9-0fc0be7a4093" # See "IMPORTANT" block above for information on Key Vault Application IDs
+#Create a resource group for Key Vault
+$keyVaultGroup = New-AzResourceGroup -Name "$prefix-key-vault-$id" -Location $location
 
-# Ref: https://docs.microsoft.com/en-us/azure/key-vault/key-vault-overview-storage-keys-powershell
+#Create a new Key Vault
+$keyVaultParameters = @{
+    Name              = "$prefix-key-vault-$id"
+    ResourceGroupName = $keyVaultGroup.ResourceGroupName
+    Location          = $location
+    Sku               = "Standard"
+}
 
-# Authenticate your PowerShell session with Azure AD
-$azureProfile = Connect-AzAccount
+$keyVault = New-AzKeyVault @keyVaultParameters
 
-# Get a reference to your Azure storage account
-$storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -StorageAccountName $storageAccountName
+#Grant yourself access to the Key Vault
+# Give your user principal access to all storage account permissions, on your Key Vault instance
+$accessPolicy = @{
+    VaultName            = $keyVault.Name
+    UserPrincipalName    = "USER_PRINCIPAL_NAME"
+    PermissionsToStorage = ("get", "list", "listsas", "delete", "set", "update", "regeneratekey", "recover", "backup", "restore", "purge")
+}
 
-# Assign RBAC role "Storage Account Key Operator Service Role" to Key Vault, limiting the access scope to your storage account.
+Set-AzKeyVaultAccessPolicy @accessPolicy
+
+$keyVault | Format-List
+
+#Create a new storage account
+$saAccountParameters = @{
+    Name              = "$($prefix)sa$id"
+    ResourceGroupName = $keyVaultGroup.ResourceGroupName
+    Location          = $location
+    SkuName           = "Standard_LRS"
+}
+
+$storageAccount = New-AzStorageAccount @saAccountParameters
+
+Get-AzStorageAccountKey -ResourceGroupName $storageAccount.ResourceGroupName -Name $storageAccount.StorageAccountName
+
+$keyVaultSpAppId = "cfa8b339-82a2-471a-a3c9-0fc0be7a4093"
+
 New-AzRoleAssignment -ApplicationId $keyVaultSpAppId -RoleDefinitionName 'Storage Account Key Operator Service Role' -Scope $storageAccount.Id
 
-# Give your user principal access to all storage account permissions, on your Key Vault instance
-
-Set-AzKeyVaultAccessPolicy -VaultName $keyVaultName -UserPrincipalName $azureProfile.Context.Account.Id -PermissionsToStorage get, list, listsas, delete, set, update, regeneratekey, recover, backup, restore, purge
-
 # Add your storage account to your Key Vault's managed storage accounts
-Add-AzKeyVaultManagedStorageAccount -VaultName $keyVaultName -AccountName $storageAccountName -AccountResourceId $storageAccount.Id -ActiveKeyName $storageAccountKey -DisableAutoRegenerateKey
+$managedStorageAccount = @{
+    VaultName          = $keyVault.VaultName
+    AccountName        = $storageAccount.StorageAccountName
+    AccountResourceId  = $storageAccount.Id
+    ActiveKeyName      = "key1"
+    RegenerationPeriod = [System.Timespan]::FromDays(90)
+}
 
-# Enable key regeneration
-$regenPeriod = [System.Timespan]::FromDays(3)
-Add-AzKeyVaultManagedStorageAccount -VaultName $keyVaultName -AccountName $storageAccountName -AccountResourceId $storageAccount.Id -ActiveKeyName $storageAccountKey -RegenerationPeriod $regenPeriod
+Add-AzKeyVaultManagedStorageAccount @managedStorageAccount
+
+Get-AzKeyVaultManagedStorageAccount -VaultName $keyVault.VaultName
+
+# Regenerate the key
+Update-AzKeyVaultManagedStorageAccountKey -VaultName $keyVault.VaultName -AccountName $storageAccount.StorageAccountName -KeyName "key1"
