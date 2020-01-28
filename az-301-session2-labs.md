@@ -1,7 +1,8 @@
 # AZ-301 Session 2 Labs
 
+* App Service
+  * Scaling
 * API Management
-    * look for speaker ID 16
     * Policies to protect APIs (rate limiting)
 
 ## Business Continuity / High Availabilty Strategy Design
@@ -11,8 +12,8 @@
     * ASR / Azure Migrate
   * Data archival
     * Storage account blob tiering
-  * App autoscale
   * Geographical load balancing
+    * Traffic Manager / Front Door
 
 ## Deployment, Migration, and Integration Design
 
@@ -20,8 +21,6 @@
   * ARM template design
 * Virtual machines
   * Networking
-  * Reserved instances
-  * dedicated host
 * Platform apps
   * Web apps
   * Function apps (pricing plans, triggers)
