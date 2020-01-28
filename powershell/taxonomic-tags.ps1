@@ -19,7 +19,7 @@
 (Get-AzResource -TagName Dept).Name
 
 # Add tags to RG without existing tags
-Set-AzResourceGroup -Name oreilly -Tag @{ Dept = "IT"; Environment = "Test" }
+Set-AzResourceGroup -Name oreilly -Tag @{ Division = "IT"; Group = "QZ" }
 
 # Add tags to RG that has existing tags
 $tags = (Get-AzResourceGroup -Name oreilly).Tags
