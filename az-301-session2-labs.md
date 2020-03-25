@@ -1,5 +1,13 @@
 # AZ-301 Session 2 Labs
 
+* Reservations
+* Spot instances
+* Cost management/ tags
+* Metrics
+* Alerts
+* KQL / alerts / ITSM connector
+* Event Grid integration
+  * Storage queue 
 * App Service
   * Scaling
 * API Management

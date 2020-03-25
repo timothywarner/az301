@@ -1,55 +1,35 @@
 # AZ-301 Session 1 Labs
 
-## Consumption, Auditing, Monitoring Design
+# Design for Identity and Security
+  * Authentication
+    + App registrations
+    + MFA (App Access Panel)
+    + Hybrid Identity (Azure AD Connect)
+  * Authorization
+    + RBAC (AAD and resource)
+    + AAD PIM
+  * Monitoring AAD
 
-* Reservations
-* Spot instances
-* Cost management/ tags
-* Metrics
-* Alerts
-* KQL / alerts / ITSM connector
-* Event Grid integration
-  * Storage queue
-
-## Identity Design
-
-* Authentication
-    * SSO w/ Azure AD Connect
-      * idFix
-      * AD Connect Health
-    * MFA
-      * Conditional Access
-      * Azure AD IdP
-* Authorization
-  * RBAC
-    * Custom roles
-  * App registrations/managed identity
-  * Azure AD Privileged Identity Management
-
-## Data Platform Solution Design
-
-* Data management
-* Storage account
-  * Data Lake
-* Relational and non-relational databases
-    * Azure SQL DB product family
-      * DTU vs vCore
-      * Always Encrypted
-      * TDE
-    * Cosmos DB
-  * Geo redundant DB backups
-  * Alerting based on query requests
-
-* Data protection
-  * VMs
-    * Azure Disk Encryption
-    * Availability zone/Availability set
-  * Key Vault
+# Design a Data Platform Solution
+  * Relational vs non-relational
+  * Managed vs unmanaged VM disks
   * Storage accounts
-    * SSE
-    * Snapshot
-    * Data tiering
-    * Soft delete
+    + SSE
+    + Snapshot
+    + Data tiering
+    + Soft delete
+  * Azure SQL Database
+    + Pricing/elastic pools
+    + Replication
+    + Data protection across lifecycle
+  * Cosmos DB
+    + Data availability and consistency
+    + At-rest data encryption
+    + Auditing
+  * Data flows
+    + Data Lake
+    + Data Factory
+  * Azure Information Protection
 
 ## Exam Prep Guidance
 
