@@ -1,18 +1,5 @@
 # AZ-301 Session 2 Labs
 
-* Reservations
-* Spot instances
-* Cost management/ tags
-* Metrics
-* Alerts
-* KQL / alerts / ITSM connector
-* Event Grid integration
-  * Storage queue 
-* App Service
-  * Scaling
-* API Management
-    * Policies to protect APIs (rate limiting)
-
 ## Business Continuity / High Availabilty Strategy Design
 
 * Site recovery
@@ -48,6 +35,8 @@ Azure Batch
 
 ## Exam Prep Guidance
 
+* Item types
+* Online testing
 * MCP private site
-* Badge system
-* Exam registration process
+* Choosing your next cert
+

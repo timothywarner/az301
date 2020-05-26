@@ -23,6 +23,7 @@
 * [Ravikirans](https://ravikirans.com/az-301-azure-exam-study-guide/)
 * [Patpicos](https://github.com/patpicos/AZ-301)
 * [WeDoAzure](https://wedoazure.ie/2019/07/10/az-301-microsoft-azure-architect-design-study-guide/)
+* [Azure in Bullet Points](https://github.com/undergroundwires/Azure-in-bullet-points)
 
 ## Hands-on labs
 
@@ -36,3 +37,9 @@
 * [MS Learning offers](https://www.microsoft.com/en-us/learning/offers.aspx)
 * [MeasureUp AZ-301](https://www.measureup.com/microsoft-azure-architect-technologies.html)
 * [WhizLabs AZ-301](https://www.whizlabs.com/microsoft-azure-certification-az-301/)
+
+## Microsoft online testing
+
+* [Microsoft online testing](https://www.microsoft.com/en-us/learning/online-exams.aspx)
+* [Pearson VUE grievance info](https://home.pearsonvue.com/microsoft/contact)
+* [Microsoft Learning grievance info](https://www.microsoft.com/en-us/learning/certification-exam-policies.aspx)
