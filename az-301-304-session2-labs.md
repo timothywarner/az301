@@ -1,5 +1,13 @@
 # AZ-301-304 Session 2 Labs
 
+* Backup and recovery
+  * VM backup
+  * VM disaster recovery
+* Data archival
+* High availability
+  * Compute, database, storage
+  * Workload geo-redundancy
+
 ## Design Migrations
 
 * Azure Migrate

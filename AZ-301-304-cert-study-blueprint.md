@@ -9,9 +9,11 @@
 * [Pearson OnVUE](https://home.pearsonvue.com/Clients/Microsoft/Online-proctored.aspx)
 * [Pearson VUE grievance info](https://home.pearsonvue.com/microsoft/contact)
 * [Microsoft Learning grievance info](https://www.microsoft.com/en-us/learning/certification-exam-policies.aspx)
+* [Tim's Online Testing Video](https://www.youtube.com/watch?v=myf6r5nulj0)
 
 ## Theory - Azure Architecture
 
+* [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 * [Azure Architecture Center](https://docs.microsoft.com/bs-cyrl-ba/azure/architecture/)
 * [Cloud Adoption Framework](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/)
 * [Azure Application Architecture Guide](https://docs.microsoft.com/en-us/azure/architecture/guide/)
